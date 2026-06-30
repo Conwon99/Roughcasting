@@ -82,7 +82,7 @@ export const DesktopNav = ({ isMobileMenuOpen = false, onCloseMobileMenu }: Desk
           >
             Services
           </a>
-          <ul className="box-border caret-transparent flex flex-col items-center gap-2 w-full mt-2 md:hidden md:group-hover:flex md:group-focus-within:flex md:absolute md:top-full md:left-1/2 md:-translate-x-1/2 md:w-[300px] md:items-stretch md:bg-[#1f1f1f] md:border md:border-white/10 md:rounded-xl md:p-3 md:shadow-[rgba(0,0,0,0.35)_0px_12px_30px_0px] md:mt-0 md:z-50">
+          <ul className="box-border caret-transparent hidden flex-col items-center gap-2 w-full mt-2 md:hidden md:group-hover:flex md:group-focus-within:flex md:absolute md:top-full md:left-1/2 md:-translate-x-1/2 md:w-[300px] md:items-stretch md:bg-[#1f1f1f] md:border md:border-white/10 md:rounded-xl md:p-3 md:shadow-[rgba(0,0,0,0.35)_0px_12px_30px_0px] md:mt-0 md:z-50">
             <li className="box-border caret-transparent w-full">
               <a href="/services" onClick={() => onCloseMobileMenu?.()} className="text-white/90 box-border caret-transparent flex justify-center md:justify-start items-center w-full text-center md:text-left py-2 md:px-3 md:rounded-lg hover:text-[#16a34a] hover:bg-white/5 text-base md:text-sm leading-6 uppercase md:normal-case font-medium border-b border-white/10 mb-1 pb-3">
                 All Services
@@ -122,7 +122,7 @@ export const DesktopNav = ({ isMobileMenuOpen = false, onCloseMobileMenu }: Desk
           >
             Locations
           </a>
-          <ul className="box-border caret-transparent flex flex-col items-center gap-2 w-full mt-2 md:hidden md:group-hover:flex md:group-focus-within:flex md:absolute md:top-full md:left-1/2 md:-translate-x-1/2 md:w-[240px] md:items-stretch md:bg-[#1f1f1f] md:border md:border-white/10 md:rounded-xl md:p-3 md:shadow-[rgba(0,0,0,0.35)_0px_12px_30px_0px] md:mt-0 md:z-50">
+          <ul className="box-border caret-transparent hidden flex-col items-center gap-2 w-full mt-2 md:hidden md:group-hover:flex md:group-focus-within:flex md:absolute md:top-full md:left-1/2 md:-translate-x-1/2 md:w-[240px] md:items-stretch md:bg-[#1f1f1f] md:border md:border-white/10 md:rounded-xl md:p-3 md:shadow-[rgba(0,0,0,0.35)_0px_12px_30px_0px] md:mt-0 md:z-50">
             <li className="box-border caret-transparent w-full">
               <a href="/locations" onClick={() => onCloseMobileMenu?.()} className="text-white/90 box-border caret-transparent flex justify-center md:justify-start items-center w-full text-center md:text-left py-2 md:px-3 md:rounded-lg hover:text-[#16a34a] hover:bg-white/5 text-base md:text-sm leading-6 uppercase md:normal-case font-medium border-b border-white/10 mb-1 pb-3">
                 All Locations

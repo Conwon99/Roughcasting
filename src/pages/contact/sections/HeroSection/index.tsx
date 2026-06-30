@@ -1,4 +1,3 @@
-import { ContactInfoCards } from "@/pages/contact/sections/HeroSection/components/ContactInfoCards";
 import { ContactFormSection } from "@/pages/contact/sections/HeroSection/components/ContactFormSection";
 import { brandName, business, citiesLabel } from "@/data/business";
 import { categories } from "@/data/categories";
@@ -19,7 +18,6 @@ export const HeroSection = () => {
           </p>
         </div>
         <ContactFormSection />
-        <ContactInfoCards />
       </div>
     </section>
   );

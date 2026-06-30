@@ -4,16 +4,16 @@ import { PhoneLink } from "@/components/PhoneLink";
 export const ContactFormSection = () => {
   return (
     <div className="box-border caret-transparent mb-[50px] md:mb-[70px]">
+      <PhoneLink
+        iconSrc="https://c.animaapp.com/mhooxuovKXaEfR/assets/670f86de88858acaf330ddd9_phone.svg"
+        iconAlt="Phone"
+        showIcon={true}
+        trackingLocation="contact-form"
+        className="text-white items-center box-border caret-transparent gap-x-3 flex justify-center mb-8"
+        displayClassName="text-white text-lg font-bold box-border caret-transparent leading-[23.4px] md:text-[22px] md:leading-[28.6px]"
+      />
       <div className="bg-[#15803d] box-border caret-transparent p-4 sm:p-5 rounded-[20px] md:p-10 max-w-[800px] mx-auto border-2 border-[#15803d] shadow-lg">
-        <PhoneLink
-          iconSrc="https://c.animaapp.com/mhooxuovKXaEfR/assets/670f86de88858acaf330ddd9_phone.svg"
-          iconAlt="Phone"
-          showIcon={true}
-          trackingLocation="contact-form"
-          className="text-white items-center box-border caret-transparent gap-x-3 flex justify-center mb-2.5"
-          displayClassName="text-white text-lg font-bold box-border caret-transparent leading-[23.4px] md:text-[22px] md:leading-[28.6px]"
-        />
-        <div className="box-border caret-transparent mt-[30px] mb-[15px]">
+        <div className="box-border caret-transparent mb-[15px]">
           <ContactForm />
           <div
             role="region"

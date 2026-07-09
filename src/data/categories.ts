@@ -30,76 +30,142 @@ export type ServiceCategory = {
 
 const brand = brandName();
 const cities = citiesLabel();
-const { assets, region } = business;
+const { assets, region, primaryCity } = business;
 
 export const categories: ServiceCategory[] = [
   {
-    slug: "primary-service-primary-city-secondary-city",
-    name: "Primary Service",
-    title: `Primary Service in ${cities}`,
-    description: `Professional primary service installation and repairs across ${cities} and surrounding areas.`,
-    intro: `${brand} provides primary service installation and repairs for homes and commercial spaces across ${region}. Work is completed neatly with practical advice and free quotes.`,
-    localParagraph: `Properties across ${cities} and nearby towns often need solutions suited to local conditions. ${brand} works locally and can advise on the most practical option for your property.`,
-    image: assets.gallery[0],
-    imageAlt: `Primary service work by ${brand} in ${business.primaryCity}`,
-    serviceSlugs: ["primary-service-installation", "primary-service-repairs"],
-    matrixTitleSuffix: "Primary Service",
-    serviceNameLower: "primary service",
-    contractorPhrase: "contractor",
-    nearMePhrase: "contractors near me",
+    slug: "roughcasting-irvine-kilwinning",
+    name: "Roughcasting",
+    title: `Roughcasting in ${cities}`,
+    description: `Professional roughcasting for full houses, extensions and new-build sections across ${cities} and surrounding Ayrshire.`,
+    intro: `${brand} completes full house and extension roughcasting across ${region}, using durable render systems finished with your choice of chip for a long-lasting, weatherproof finish.`,
+    localParagraph: `Homes across ${cities} and nearby towns face constant exposure to Scottish weather, and a sound roughcast finish keeps walls protected and looking sharp for years. ${brand} works locally and can advise on the best chip and colour for your property.`,
+    image: assets.gallery[4],
+    imageAlt: `Full house roughcasting by ${brand} in ${primaryCity}`,
+    serviceSlugs: ["full-house-roughcasting", "extension-roughcasting"],
+    matrixTitleSuffix: "Roughcasting",
+    serviceNameLower: "roughcasting",
+    contractorPhrase: "roughcaster",
+    nearMePhrase: "roughcasting near me",
     metaTemplate: (displayName) =>
-      `Professional primary service in ${displayName} by ${brand}. Installation, repairs and free quotes across ${region}.`,
+      `Professional roughcasting in ${displayName} by ${brand}. Full houses, extensions and free quotes across ${region}.`,
     introTemplate: (town) =>
-      `${brand} provides professional primary service installation and repairs in ${town}. Whether you need new work, section replacement or repairs, jobs are completed neatly with free quotes.`,
+      `${brand} provides professional roughcasting in ${town}, covering full houses, extensions and new-build sections. Jobs are completed neatly with free quotes.`,
     localTemplate: (town, nearby) =>
-      `Properties in ${town} often need work that suits local weather and ground conditions. If you are searching for a contractor near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
+      `Properties in ${town} need a roughcast finish that can handle exposed, coastal Ayrshire weather. If you are searching for a roughcaster near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
     bodyTemplate: (town) =>
-      `From full installations to section repairs, ${brand} helps customers in ${town} with practical primary service solutions. Old materials can be removed where needed. Contact ${brand} for a free quote in ${town}.`,
+      `From full house renders to extensions and new-build sections, ${brand} helps customers in ${town} achieve a durable roughcast finish in a range of chips and colours. Old, failing render can be stripped back to brick before the new system goes on. Contact ${brand} for a free quote in ${town}.`,
     faqTemplates: (town) => [
       {
-        question: `Do you provide primary service in ${town}?`,
-        answer: `Yes. ${brand} installs and repairs primary services in ${town} and nearby areas. Free quotes are available.`,
+        question: `Do you provide roughcasting in ${town}?`,
+        answer: `Yes. ${brand} roughcasts full houses and extensions in ${town} and nearby areas. Free quotes are available.`,
       },
       {
-        question: `Can you repair work in ${town}?`,
-        answer: `Yes. ${brand} handles repairs and replacement sections in ${town}. Contact us with photos for a quicker quote.`,
+        question: `Can you strip old render back to brick in ${town}?`,
+        answer: `Yes. Failing or blown render can be stripped back to brickwork before the new roughcast system is applied in ${town}.`,
       },
       {
-        question: `How do I get a quote in ${town}?`,
-        answer: `Call ${brand} or use the contact form with a brief description and your location in ${town}. There is no obligation to proceed.`,
+        question: `Is there a roughcaster near me in ${town}?`,
+        answer: `Yes. ${brand} is a local roughcaster serving ${town} and surrounding Ayrshire. Contact us with your location for a free quote.`,
       },
     ],
   },
   {
-    slug: "secondary-service-primary-city-secondary-city",
-    name: "Secondary Service",
-    title: `Secondary Service in ${cities}`,
-    description: `Secondary service across ${cities} and surrounding areas. Practical outdoor improvements with tidy workmanship.`,
-    intro: `${brand} provides secondary service work so outdoor spaces feel safer, cleaner and easier to maintain.`,
-    localParagraph: `Gardens and outdoor areas across ${region} often need seasonal attention. ${brand} helps local customers without leaving a mess behind.`,
+    slug: "garden-wall-garage-roughcasting-irvine-kilwinning",
+    name: "Garden Wall & Garage Roughcasting",
+    title: `Garden Wall & Garage Roughcasting in ${cities}`,
+    description: `Roughcasting for garden walls, garages and boundary walls across ${cities}, finished neatly with coping stones where needed.`,
+    intro: `${brand} regularly roughcasts garden walls and garages across ${region}, from small boundary walls to full driveway and garage renders.`,
+    localParagraph: `Garden walls and garages in ${cities} take a battering from the weather and everyday wear. ${brand} works locally and can match new roughcast work to the rest of the property.`,
     image: assets.gallery[2],
-    imageAlt: `Secondary service by ${brand}`,
-    serviceSlugs: ["secondary-service"],
-    matrixTitleSuffix: "Secondary Service",
-    serviceNameLower: "secondary service",
-    contractorPhrase: "specialist",
-    nearMePhrase: "secondary service near me",
+    imageAlt: `Garden wall roughcasting by ${brand} in ${primaryCity}`,
+    serviceSlugs: ["garden-wall-roughcasting", "garage-roughcasting"],
+    matrixTitleSuffix: "Garden Wall & Garage Roughcasting",
+    serviceNameLower: "garden wall and garage roughcasting",
+    contractorPhrase: "roughcaster",
+    nearMePhrase: "garden wall roughcasting near me",
     metaTemplate: (displayName) =>
-      `Secondary service in ${displayName} by ${brand}. Outdoor improvements and free quotes across ${region}.`,
+      `Garden wall and garage roughcasting in ${displayName} by ${brand}. Free quotes across ${region}.`,
     introTemplate: (town) =>
-      `${brand} provides secondary service work in ${town}, planned around your space and how you use the area.`,
+      `${brand} roughcasts garden walls and garages in ${town}, from small boundary walls to full garage renders finished with matching chips.`,
     localTemplate: (town, nearby) =>
-      `Every property in ${town} is different. If you are searching for secondary service near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
+      `Garden walls and garages in ${town} are exposed to the same weather as the rest of the house. If you are searching for garden wall roughcasting near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
     bodyTemplate: (town) =>
-      `${brand} helps improve outdoor spaces in ${town}. Work is planned around access and materials. Contact ${brand} for a free quote in ${town}.`,
+      `${brand} completes garden wall and garage roughcasting jobs in ${town} of all sizes, often finished with coping stones for a neat, durable edge. Contact ${brand} for a free quote in ${town}.`,
     faqTemplates: (town) => [
       {
-        question: `Do you offer secondary service in ${town}?`,
-        answer: `Yes. ${brand} provides secondary service in ${town} and nearby areas. Get in touch for a free quote.`,
+        question: `Do you roughcast garden walls in ${town}?`,
+        answer: `Yes. ${brand} roughcasts garden and boundary walls of all sizes in ${town}, with free quotes available.`,
       },
       {
-        question: `How do I book work in ${town}?`,
-        answer: `Contact ${brand} with details of the work and your location in ${town}. Photos help us respond quickly.`,
+        question: `Can you roughcast a garage in ${town}?`,
+        answer: `Yes. ${brand} completes garage roughcasting in ${town}, matched to the rest of the property where needed.`,
+      },
+    ],
+  },
+  {
+    slug: "smooth-render-irvine-kilwinning",
+    name: "Smooth Render",
+    title: `Smooth Render in ${cities}`,
+    description: `Smooth render finishes and render repairs across ${cities}, giving properties a clean, modern painted finish.`,
+    intro: `${brand} applies smooth render finishes across ${region} for customers who want a contemporary, paintable exterior rather than a traditional chip finish.`,
+    localParagraph: `Smooth render is a popular choice for extensions and refurbishments across ${cities}. ${brand} prepares the surface properly so the finish stays sound for years.`,
+    image: assets.gallery[1],
+    imageAlt: `Smooth render finish by ${brand} in ${primaryCity}`,
+    serviceSlugs: ["smooth-render", "render-repairs-patch-ups"],
+    matrixTitleSuffix: "Smooth Render",
+    serviceNameLower: "smooth render",
+    contractorPhrase: "render specialist",
+    nearMePhrase: "smooth render near me",
+    metaTemplate: (displayName) =>
+      `Smooth render in ${displayName} by ${brand}. Render repairs, patch-ups and free quotes across ${region}.`,
+    introTemplate: (town) =>
+      `${brand} applies smooth render finishes and carries out render repairs in ${town}, giving properties a clean, contemporary exterior.`,
+    localTemplate: (town, nearby) =>
+      `Extensions and refurbishments in ${town} often call for a smooth, paintable render finish. If you are searching for a render specialist near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
+    bodyTemplate: (town) =>
+      `Whether it is a full smooth render or a patch repair to cracked or blown areas, ${brand} helps customers in ${town} get a sound, tidy finish. Contact ${brand} for a free quote in ${town}.`,
+    faqTemplates: (town) => [
+      {
+        question: `Do you apply smooth render in ${town}?`,
+        answer: `Yes. ${brand} applies smooth render finishes in ${town} and nearby areas, with free quotes available.`,
+      },
+      {
+        question: `Can you repair cracked render in ${town}?`,
+        answer: `Yes. ${brand} patches and repairs damaged render sections in ${town} rather than always requiring a full re-render.`,
+      },
+    ],
+  },
+  {
+    slug: "plastering-irvine-kilwinning",
+    name: "Plastering",
+    title: `Plastering in ${cities}`,
+    description: `Interior plastering and plaster repairs across ${cities}, finished smooth and ready for decoration.`,
+    intro: `${brand} carries out interior plastering across ${region}, from full skims to patch repairs on damaged walls and ceilings.`,
+    localParagraph: `Older properties across ${cities} often need plaster repaired or refreshed as part of wider renovation work. ${brand} works cleanly and leaves surfaces ready for painting.`,
+    image: assets.gallery[3],
+    imageAlt: `Plastering work completed by ${brand} in ${primaryCity}`,
+    serviceSlugs: ["interior-plastering"],
+    matrixTitleSuffix: "Plastering",
+    serviceNameLower: "plastering",
+    contractorPhrase: "plasterer",
+    nearMePhrase: "plasterer near me",
+    metaTemplate: (displayName) =>
+      `Plastering in ${displayName} by ${brand}. Interior plastering and free quotes across ${region}.`,
+    introTemplate: (town) =>
+      `${brand} provides interior plastering in ${town}, from full skims to smaller patch repairs.`,
+    localTemplate: (town, nearby) =>
+      `Older homes in ${town} often need plaster repaired before decorating. If you are searching for a plasterer near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
+    bodyTemplate: (town) =>
+      `${brand} plasters walls and ceilings in ${town}, leaving a smooth surface ready for painting or wallpapering. Contact ${brand} for a free quote in ${town}.`,
+    faqTemplates: (town) => [
+      {
+        question: `Do you offer plastering in ${town}?`,
+        answer: `Yes. ${brand} provides interior plastering in ${town} and nearby areas, with free quotes available.`,
+      },
+      {
+        question: `Is there a plasterer near me in ${town}?`,
+        answer: `Yes. ${brand} is a local plasterer serving ${town} and surrounding Ayrshire.`,
       },
     ],
   },

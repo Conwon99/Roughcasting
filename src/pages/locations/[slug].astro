@@ -47,7 +47,7 @@ const placeSchema = {
   description: location.description,
   containedInPlace: {
     "@type": "AdministrativeArea",
-    name: "Perthshire",
+    name: business.region,
   },
 };
 const faqSchema = buildFaqSchema(location.locationFaqs);
@@ -76,7 +76,7 @@ const breadcrumbSchema = {
           <div class="relative z-10 box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px] text-center">
             <p class="text-[#16a34a] text-sm font-semibold uppercase tracking-[0.18em] mb-4">Service Area</p>
             <h1 class="text-white text-[34px] font-bold box-border caret-transparent leading-[44px] mb-5 md:text-[64px] md:leading-[78px]">
-              Fencing, Tree Care & Landscaping in <span class="text-[#16a34a]">{location.name}</span>
+              Roughcasting, Render & Plastering in <span class="text-[#16a34a]">{location.name}</span>
             </h1>
             <p class="text-slate-200 box-border caret-transparent max-w-[780px] mx-auto">{location.intro}</p>
             <div class="box-border caret-transparent flex items-center justify-center mt-8">
@@ -93,10 +93,10 @@ const breadcrumbSchema = {
         <div class="box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px]">
           <div class="bg-white box-border caret-transparent rounded-[20px] p-6 md:p-10">
             <h2 class="text-gray-900 text-[28px] font-bold box-border caret-transparent leading-[36px] mb-5 md:text-[44px] md:leading-[54px]">
-              Outdoor Services in {location.name}
+              Roughcasting & Render Services in {location.name}
             </h2>
             <p class="text-gray-700 box-border caret-transparent mb-6">
-              {location.description} Whether you need home service work completed, {brand} can help with tidy workmanship and practical advice.
+              {location.description} Whether you need a garden wall, a full house re-render or a patch repair, {brand} can help with tidy workmanship and practical advice.
             </p>
 
             <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent mb-3">Services in {location.name}</h3>

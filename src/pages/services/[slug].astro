@@ -56,7 +56,7 @@ const serviceSchema = {
     url: absoluteUrl("/contact"),
     priceCurrency: "GBP",
     availability: "https://schema.org/InStock",
-    description: `Free quote for ${service.title.toLowerCase()} across Perth, Dundee and Perthshire.`,
+    description: `Free quote for ${service.title.toLowerCase()} across ${cities} and ${business.region}.`,
   },
 };
 const faqSchema = {
@@ -103,7 +103,7 @@ const breadcrumbSchema = {
             <div class="box-border caret-transparent text-center w-full mb-[30px] mx-auto md:w-4/5 md:mb-[50px]">
               <p class="text-[#16a34a] text-sm font-semibold uppercase tracking-[0.18em] mb-4">Service</p>
               <h1 class="text-white text-[38px] font-bold box-border caret-transparent leading-[49.4px] mb-5 md:text-[68px] md:leading-[88.4px]">
-                {service.title} in <span class="text-[#16a34a]">Perth and Dundee</span>
+                {service.title} in <span class="text-[#16a34a]">{cities}</span>
               </h1>
               <p class="text-slate-200 box-border caret-transparent max-w-full mx-auto md:max-w-[70%]">{service.description}</p>
               <div class="box-border caret-transparent flex items-center justify-center mt-8">
@@ -155,14 +155,14 @@ const breadcrumbSchema = {
                         </>
                       ))}
                       {parentCategory && (
-                        <> — or view all <a href={`/${parentCategory.slug}`} class="text-[#16a34a] hover:underline font-medium">{parentCategory.name} in Perth & Dundee</a></>
+                        <> — or view all <a href={`/${parentCategory.slug}`} class="text-[#16a34a] hover:underline font-medium">{parentCategory.name} in {cities}</a></>
                       )}
                     </p>
                   )}
                 </div>
                 <div class="box-border caret-transparent">
                   <h2 class="text-gray-900 text-[22px] font-bold box-border caret-transparent leading-[30.8px] mb-2.5 md:text-[34px] md:leading-[40.8px] md:mb-[30px]">
-                    {service.shortTitle} for Perth & Dundee homes
+                    {service.shortTitle} for {cities} homes
                   </h2>
                   <p class="box-border caret-transparent mb-2.5 text-gray-700">{service.localContext}</p>
                 </div>

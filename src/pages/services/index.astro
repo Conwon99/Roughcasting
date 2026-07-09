@@ -20,8 +20,8 @@ const pageSchema = {
   "@type": "WebPage",
   "@id": `${canonical}#webpage`,
   url: canonical,
-  name: `Home Services in ${cities} | ${brand}`,
-  description: `Full list of home services from ${brand} across ${cities} and ${business.region}.`,
+  name: `Roughcasting, Render & Plastering Services in ${cities} | ${brand}`,
+  description: `Full list of roughcasting, render and plastering services from ${brand} across ${cities} and ${business.region}.`,
   isPartOf: { "@id": `${siteRoot}#website` },
   inLanguage: "en-GB",
 };
@@ -36,7 +36,7 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`Home Services in ${cities} | ${brand}`}
+  title={`Roughcasting, Render & Plastering Services in ${cities} | ${brand}`}
   description={`Full list of ${serviceList} in ${cities} and ${business.region}. Free quotes available.`}
   canonical={canonical}
 >
@@ -47,7 +47,7 @@ const breadcrumbSchema = {
         <div class="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8 text-center">
           <p class="text-[#16a34a] text-sm font-semibold uppercase tracking-[0.18em] mb-4">All Services</p>
           <h1 class="text-white text-[34px] font-bold box-border caret-transparent leading-[44px] mb-5 md:text-[64px] md:leading-[78px]">
-            Fencing, Tree Care & Landscaping Services in <span class="text-[#16a34a]">Perth & Dundee</span>
+            Roughcasting, Render & Plastering Services in <span class="text-[#16a34a]">{cities}</span>
           </h1>
           <p class="text-slate-200 box-border caret-transparent max-w-[780px] mx-auto mb-8">
             Find the service you need below or call {brand} on <TrackedTelLink client:load showPhoneNumber className="text-[#16a34a] hover:underline font-semibold" trackingLocation="services" />. We handle {serviceList} across {business.region}.

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap — update domain when building a new site
-Sitemap: https://www.yourbusiness.co.uk/sitemap.xml
+Sitemap: https://www.jkellyroughcasting.co.uk/sitemap.xml
 
 # Disallow private/non-public endpoints only. Keep Astro assets crawlable so search engines can render pages.
 Disallow: /api/

@@ -16,8 +16,8 @@ const aboutSchema = {
   "@type": "AboutPage",
   "@id": `${canonical}#webpage`,
   url: canonical,
-  name: `About ${brand} | ${cities} Home Service Specialists`,
-  description: `Meet ${brand} — locally trusted home service specialists serving ${cities} and ${business.region}.`,
+  name: `About ${brand} | ${cities} Roughcasting & Rendering Specialists`,
+  description: `Meet ${brand} — locally trusted roughcasting, render and plastering specialists serving ${cities} and ${business.region}.`,
   isPartOf: { "@id": `${absoluteUrl("/")}#website` },
   about: { "@id": `${absoluteUrl("/")}#business` },
   inLanguage: "en-GB",
@@ -33,8 +33,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`About ${brand} | ${cities} Home Service Specialists`}
-  description={`Meet ${brand}. Locally trusted home services serving ${cities} and surrounding areas. Free quotes available.`}
+  title={`About ${brand} | ${cities} Roughcasting & Rendering Specialists`}
+  description={`Meet ${brand}. Locally trusted roughcasting, render and plastering serving ${cities} and surrounding Ayrshire. Free quotes available.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
@@ -62,21 +62,19 @@ const breadcrumbSchema = {
           <div class="bg-white rounded-[20px] p-6 md:p-10 space-y-10">
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">How {brand} Got Started</h2>
-              <!-- AI: replace with authentic business story from Facebook intro/posts -->
-              <p class="text-gray-700 leading-7">{brand} helps customers across {cities} and {business.region} with practical home and outdoor services. Replace this paragraph with the business story from the Facebook scrape.</p>
+              <p class="text-gray-700 leading-7">{brand} was set up by Joe Kelly in Irvine in March 2022, starting out with garden wall and patchwork jobs before building a reputation right across {business.region}. Word of mouth and repeat customers have grown the business steadily, from small repairs to full house re-renders taken right back to the brick. Customers consistently mention Joe's work ethic, clear communication and tidy finish — the same values the business is built on today.</p>
             </div>
 
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Meet the Team</h2>
-              <!-- AI: replace with real owner/team information from Facebook -->
               <div class="flex flex-col md:flex-row gap-6 items-start">
                 <div class="w-32 h-32 rounded-full bg-gray-200 shrink-0 overflow-hidden">
                   <img src={business.assets.about} alt={`${brand} team at work`} width="128" height="128" class="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div>
-                  <h3 class="text-gray-900 text-xl font-bold mb-1">Owner Name — {brand}</h3>
-                  <p class="text-gray-600 text-sm mb-3">Owner & Home Service Specialist</p>
-                  <p class="text-gray-700 leading-7">Replace with owner bio from Facebook page intro and posts. Include credentials, experience and connection to the local area.</p>
+                  <h3 class="text-gray-900 text-xl font-bold mb-1">Joe Kelly — {brand}</h3>
+                  <p class="text-gray-600 text-sm mb-3">Owner & Roughcaster</p>
+                  <p class="text-gray-700 leading-7">Joe is a self-employed roughcaster based in Irvine, covering everything from garden walls and garages to full house roughcasting, smooth render and plastering. Customers regularly highlight his hard work, reliability and the way he keeps them updated from first message through to the finished job.</p>
                 </div>
               </div>
             </div>
@@ -91,7 +89,7 @@ const breadcrumbSchema = {
 
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Proudly Serving {cities} and Surrounding Areas</h2>
-              <p class="text-gray-700 leading-7 mb-4">{brand} covers home services across {business.region}. <a href="/locations" class="text-[#16a34a] hover:underline font-medium">View all service areas</a>.</p>
+              <p class="text-gray-700 leading-7 mb-4">{brand} covers roughcasting, render and plastering work across {business.region}. <a href="/locations" class="text-[#16a34a] hover:underline font-medium">View all service areas</a>.</p>
               <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
                 {locations.map((location) => (
                   <a href={`/locations/${location.slug}`} class="text-[#16a34a] hover:underline text-sm">{location.name}</a>
@@ -100,13 +98,12 @@ const breadcrumbSchema = {
             </div>
 
             <div>
-              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Licensed, Insured, and Guaranteed</h2>
-              <!-- AI: add license numbers, insurance details, certifications -->
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Why Customers Choose {brand}</h2>
               <ul class="text-gray-700 space-y-2 list-disc pl-5">
                 <li>Free quotes on all work</li>
-                <li>Tidy workmanship and clear communication</li>
-                <li>Trusted by customers across {cities}</li>
-                <li>Licensed and insured — add your details here</li>
+                <li>Tidy workmanship and clear communication throughout the job</li>
+                <li>Trusted by customers across {cities} since 2022</li>
+                <li>Jobs of every size, from garden walls to full house re-renders</li>
               </ul>
             </div>
 

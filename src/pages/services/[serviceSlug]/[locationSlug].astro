@@ -1,0 +1,192 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Header } from "@/sections/Header";
+import { RatingDisplay } from "@/sections/ExperienceSection/components/RatingDisplay";
+import { CTASection } from "@/sections/Footer/components/CTASection";
+import { Footer } from "@/sections/Footer";
+import {
+  serviceLocationPages,
+  getNearbyServiceLocationLinks,
+  getServiceLocationPagesForLocation,
+  getServiceLocationPath,
+  type ServiceLocationPage,
+} from "@/data/serviceLocations";
+import { getCategoryBySlug } from "@/data/categories";
+import { buildFaqSchema } from "@/data/faqs";
+import { absoluteUrl, brandName, business } from "@/data/business";
+
+export function getStaticPaths() {
+  return serviceLocationPages.map((page) => ({
+    params: { serviceSlug: page.serviceSlug, locationSlug: page.locationSlug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props as { page: ServiceLocationPage };
+const brand = brandName();
+const siteRoot = absoluteUrl("/");
+const canonical = absoluteUrl(`/services/${page.serviceSlug}/${page.locationSlug}`);
+const parentCategory = page.service.parentCategorySlug ? getCategoryBySlug(page.service.parentCategorySlug) : null;
+const otherServicesHere = getServiceLocationPagesForLocation(page.locationSlug).filter(
+  (item) => item.serviceSlug !== page.serviceSlug,
+);
+const nearbyLinks = getNearbyServiceLocationLinks(page);
+const absoluteImage = absoluteUrl(page.service.image);
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonical}#webpage`,
+  url: canonical,
+  name: page.title,
+  description: page.metaDescription,
+  isPartOf: { "@id": `${siteRoot}#website` },
+  about: { "@id": `${canonical}#service` },
+  primaryImageOfPage: { "@type": "ImageObject", url: absoluteImage },
+  inLanguage: "en-GB",
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${canonical}#service`,
+  name: page.h1,
+  description: page.intro,
+  url: canonical,
+  image: absoluteImage,
+  provider: { "@id": `${siteRoot}#business` },
+  areaServed: { "@type": "City", name: page.location.name },
+  offers: {
+    "@type": "Offer",
+    url: absoluteUrl("/contact"),
+    priceCurrency: "GBP",
+    availability: "https://schema.org/InStock",
+    description: `Free quote for ${page.service.title.toLowerCase()} in ${page.location.name}.`,
+  },
+};
+const placeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "@id": `${canonical}#place`,
+  name: page.location.name,
+  description: page.localParagraph,
+};
+const faqSchema = buildFaqSchema(page.faqs);
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteRoot },
+    { "@type": "ListItem", position: 2, name: "Services", item: absoluteUrl("/services") },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: page.service.title,
+      item: absoluteUrl(`/services/${page.serviceSlug}`),
+    },
+    { "@type": "ListItem", position: 4, name: page.location.name, item: canonical },
+  ],
+};
+---
+
+<BaseLayout
+  title={page.title}
+  description={page.metaDescription}
+  canonical={canonical}
+  ogImage={absoluteImage}
+>
+  <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
+    <Header client:load />
+    <main>
+      <section class="box-border caret-transparent pt-[74px] md:pt-[120px]">
+        <div class="relative bg-gray-900 bg-cover bg-center box-border caret-transparent mx-[15px] pt-[80px] pb-[90px] rounded-[20px] md:pt-[150px] md:pb-[180px] overflow-hidden" style={`background-image:url('${page.service.image}')`}>
+          <div class="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-900/70 to-gray-900/90"></div>
+          <div class="relative z-10 box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px] text-center">
+            <p class="text-[#16a34a] text-sm font-semibold uppercase tracking-[0.18em] mb-4">{page.service.shortTitle}</p>
+            <h1 class="text-white text-[34px] font-bold box-border caret-transparent leading-[44px] mb-5 md:text-[64px] md:leading-[78px]">
+              {page.service.title} in <span class="text-[#16a34a]">{page.location.name}</span>
+            </h1>
+            <p class="text-slate-200 box-border caret-transparent max-w-[780px] mx-auto">{page.intro}</p>
+            <div class="box-border caret-transparent flex items-center justify-center mt-8">
+              <a href="/contact" class="text-white text-base bg-[#15803d] box-border caret-transparent leading-[22px] text-center font-bold border border-[#15803d] px-8 py-4 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[36px] md:py-5 hover:bg-[#16a34a] hover:border-[#16a34a] transition-colors inline-flex items-center justify-center gap-3">
+                <svg class="h-5 w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                Get a Free Quote
+              </a>
+            </div>
+            <div class="flex justify-center mt-4 md:mt-8">
+              <RatingDisplay client:load />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent pt-[70px] md:pt-[120px]">
+        <div class="box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px]">
+          <div class="bg-white box-border caret-transparent rounded-[20px] p-6 md:p-10">
+            <h2 class="text-gray-900 text-[28px] font-bold box-border caret-transparent leading-[36px] mb-5 md:text-[44px] md:leading-[54px]">
+              {page.service.title} Services in {page.location.name}
+            </h2>
+            <p class="text-gray-700 box-border caret-transparent mb-6 leading-7">{page.localParagraph}</p>
+            <p class="text-gray-700 box-border caret-transparent mb-8 leading-7">{page.bodyParagraph}</p>
+
+            {otherServicesHere.length > 0 && (
+              <>
+                <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent mb-3">Other services in {page.location.name}</h3>
+                <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 mb-8">
+                  {otherServicesHere.map((item) => (
+                    <a href={getServiceLocationPath(item.serviceSlug, item.locationSlug)} class="text-[#16a34a] hover:underline font-medium">{item.service.title} in {page.location.name}</a>
+                  ))}
+                </div>
+              </>
+            )}
+
+            <p class="text-gray-700 box-border caret-transparent mb-6 leading-7">
+              View the <a href={`/services/${page.serviceSlug}`} class="text-[#16a34a] hover:underline font-medium">{page.service.title} overview page</a>{parentCategory && (
+                <> or all <a href={`/${parentCategory.slug}`} class="text-[#16a34a] hover:underline font-medium">{parentCategory.name}</a></>
+              )}, the <a href={`/locations/${page.locationSlug}`} class="text-[#16a34a] hover:underline font-medium">{page.location.name} service area page</a>,
+              or <a href="/contact" class="text-[#16a34a] hover:underline font-medium">contact {brand}</a> for a free quote.
+            </p>
+
+            {nearbyLinks.length > 0 && (
+              <>
+                <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent mb-3">Nearby areas</h3>
+                <ul class="grid grid-cols-1 gap-2 pl-0 list-none md:grid-cols-2 mb-4">
+                  {nearbyLinks.map((link) => (
+                    <li>
+                      <a href={link.href} class="text-[#16a34a] hover:underline">{page.service.title} in {link.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent py-[70px] md:py-[100px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
+          <div class="box-border caret-transparent text-center mb-[30px] md:mb-[50px]">
+            <h2 class="text-white text-4xl font-bold box-border caret-transparent leading-[43.2px] mb-2.5 md:text-[56px] md:leading-[67.2px]">
+              {page.service.title} in {page.location.name} — FAQs
+            </h2>
+          </div>
+          <div class="items-start box-border caret-transparent gap-x-[30px] flex flex-col justify-start gap-y-[20px]">
+            {page.faqs.map((item) => (
+              <article class="bg-white box-border caret-transparent rounded-[20px] p-6 w-full">
+                <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent leading-[26px] mb-3">{item.question}</h3>
+                <p class="text-gray-700 box-border caret-transparent">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTASection client:load />
+    </main>
+    <Footer client:load />
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(placeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+</BaseLayout>

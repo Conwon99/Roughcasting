@@ -190,6 +190,6 @@ export const getRelatedServices = (serviceSlug: string): ServicePage[] => {
 
 export const getFormServiceOptions = (): string[] => [
   ...categories.map((category) => category.name),
-  ...services.filter((service) => service.slug !== "free-quotes").map((service) => service.shortTitle),
+  ...services.map((service) => service.shortTitle),
   "Other / Not Sure",
 ];

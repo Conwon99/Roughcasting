@@ -82,7 +82,7 @@ export const Footer = () => {
                     {link.label}
                   </a>
                 ))}
-                {services.filter((s) => s.slug !== "free-quotes").map((service) => (
+                {services.map((service) => (
                   <a key={service.slug} href={`/services/${service.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
                     {service.shortTitle}
                   </a>

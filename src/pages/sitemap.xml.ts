@@ -52,7 +52,7 @@ const pages: SitemapPage[] = [
 
     path: `/services/${service.slug}`,
 
-    priority: service.slug === 'free-quotes' ? '0.6' : '0.85',
+    priority: '0.85',
 
     changefreq: 'monthly' as const,
 

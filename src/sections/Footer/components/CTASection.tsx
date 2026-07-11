@@ -13,7 +13,7 @@ export const CTASection = () => {
             Get a free quote today
           </h2>
           <p className="text-gray-200 box-border caret-transparent max-w-md mb-2.5">
-            Get your free quote today for {serviceList} across {citiesLabel()} and {business.region}.
+            Get your free quote today for {serviceList} across {citiesLabel()}.
           </p>
           <div className="flex flex-col items-center gap-4 w-full max-w-2xl">
             <a href="/contact"

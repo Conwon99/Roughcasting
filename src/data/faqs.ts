@@ -15,7 +15,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     question: "What areas do you cover?",
-    answer: `${brand} serves ${cities} and surrounding areas across ${business.region}. If you are nearby, get in touch and we can confirm availability.`,
+    answer: `${brand} serves ${cities} and surrounding towns. If you are nearby, get in touch and we can confirm availability.`,
   },
   {
     question: "How do I get started?",

@@ -7,7 +7,7 @@ import { absoluteUrl, brandName, business, citiesLabel } from "@/data/business";
 
 <BaseLayout
   title={`Page Not Found | ${brandName()}`}
-  description={`The page you are looking for could not be found. Return to ${brandName()} or contact us for a free quote across ${citiesLabel()} and ${business.region}.`}
+  description={`The page you are looking for could not be found. Return to ${brandName()} or contact us for a free quote across ${citiesLabel()}.`}
   canonical={absoluteUrl("/404")}
   robots="noindex, follow"
 >
@@ -19,7 +19,7 @@ import { absoluteUrl, brandName, business, citiesLabel } from "@/data/business";
         Page not found
       </h1>
       <p class="text-gray-200 text-base leading-7 max-w-[640px] mx-auto mb-8 md:text-lg">
-        This page does not exist, but {brandName()} can still help with roughcasting, render and plastering across {citiesLabel()} and {business.region}.
+        This page does not exist, but {brandName()} can still help with roughcasting, render and plastering across {citiesLabel()}.
       </p>
       <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
         <a href="/" class="inline-flex items-center justify-center text-white bg-[#15803d] px-6 py-3 rounded-[100px] font-semibold hover:bg-[#16a34a] transition-colors">

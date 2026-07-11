@@ -14,7 +14,7 @@ export const HeroSection = () => {
             Get a Free Quote from {brand}
           </h1>
           <p className="text-gray-200 box-border caret-transparent mb-2.5">
-            Contact us for {serviceList} quotes across {citiesLabel()} and {business.region}.
+            Contact us for {serviceList} quotes across {citiesLabel()}.
           </p>
         </div>
         <ContactFormSection />

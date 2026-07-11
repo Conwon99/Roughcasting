@@ -12,7 +12,7 @@ export const ContactInfoCards = () => {
         iconAlt={`Location icon - ${brand} service area`}
         title="Service Area"
         titleClassName="text-white text-xl font-bold box-border caret-transparent leading-6 mb-2.5 md:text-2xl md:leading-[28.8px]"
-        content={`${citiesLabel()} and ${business.region}`}
+        content={`${citiesLabel()}`}
         contentClassName="text-white box-border caret-transparent"
       />
       <ContactCard

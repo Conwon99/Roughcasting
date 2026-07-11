@@ -18,7 +18,7 @@ const reviewSchema = {
   "@id": `${canonical}#webpage`,
   "url": canonical,
   "name": `Customer Reviews | ${brand}`,
-  "description": `Read customer reviews for ${brand} ${serviceList} work across ${cities} and ${business.region}.`,
+  "description": `Read customer reviews for ${brand} ${serviceList} work across ${cities}.`,
   "isPartOf": { "@id": `${siteRoot}#website` },
   "about": { "@id": `${siteRoot}#business` },
   "mainEntity": reviews.map((review) => ({
@@ -60,7 +60,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title={`Customer Reviews | ${brand} ${cities}`}
-  description={`Read customer reviews for ${brand} ${serviceList} work across ${cities} and ${business.region}.`}
+  description={`Read customer reviews for ${brand} ${serviceList} work across ${cities}.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
@@ -73,7 +73,7 @@ const breadcrumbSchema = {
             Customer Reviews
           </h1>
           <p class="text-slate-200 box-border caret-transparent max-w-[760px] mx-auto">
-            Customers recommend {brand} for reliable {serviceList} across {cities} and {business.region}.
+            Customers recommend {brand} for reliable {serviceList} across {cities}.
           </p>
           <div class="box-border caret-transparent flex items-center justify-center gap-x-1 mt-6" aria-label="5 star customer rating">
             {[1, 2, 3, 4, 5].map((i) => (

@@ -21,7 +21,7 @@ const pageSchema = {
   "@id": `${canonical}#webpage`,
   url: canonical,
   name: `Roughcasting, Render & Plastering Services in ${cities} | ${brand}`,
-  description: `Full list of roughcasting, render and plastering services from ${brand} across ${cities} and ${business.region}.`,
+  description: `Full list of roughcasting, render and plastering services from ${brand} across ${cities}.`,
   isPartOf: { "@id": `${siteRoot}#website` },
   inLanguage: "en-GB",
 };
@@ -37,7 +37,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title={`Roughcasting, Render & Plastering Services in ${cities} | ${brand}`}
-  description={`Full list of ${serviceList} in ${cities} and ${business.region}. Free quotes available.`}
+  description={`Full list of ${serviceList} in ${cities}. Free quotes available.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">

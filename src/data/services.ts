@@ -172,7 +172,7 @@ export const services: ServicePage[] = [
     cardDescription: "Garages base coated, beaded and roughcast to match the main house finish.",
     iconUrl: "/icons/garage-roughcasting.svg",
     iconAlt: "Garage roughcasting icon",
-    image: assets.gallery[0],
+    image: "/jkellyroughcasting-gal-02-v2.jpg",
     imageAlt: `Garage roughcasting by ${brand} in ${primaryCity}`,
     about: `${brand} roughcasts garages across ${region}, from single detached garages to larger blocks, base coated and finished to match the main house wherever possible.`,
     why: "A roughcast garage protects the blockwork and ties the whole property together visually rather than leaving an unfinished outbuilding.",

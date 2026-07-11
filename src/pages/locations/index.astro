@@ -20,7 +20,7 @@ const pageSchema = {
   "@id": `${canonical}#webpage`,
   url: canonical,
   name: `Service Areas | ${brand} ${cities}`,
-  description: `${brand} serves ${cities} and towns across ${business.region} with ${serviceList}.`,
+  description: `${brand} serves ${cities} and surrounding towns with ${serviceList}.`,
   isPartOf: { "@id": `${siteRoot}#website` },
   inLanguage: "en-GB",
 };
@@ -36,7 +36,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title={`Service Areas ${cities} | ${brand}`}
-  description={`${brand} serves ${cities} and surrounding areas in ${business.region} with ${serviceList}.`}
+  description={`${brand} serves ${cities} and surrounding towns with ${serviceList}.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">

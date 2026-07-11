@@ -34,10 +34,10 @@ const { assets, region, primaryCity } = business;
 
 export const categories: ServiceCategory[] = [
   {
-    slug: "roughcasting-irvine-kilwinning",
+    slug: "roughcasting-ayrshire",
     name: "Roughcasting",
     title: `Roughcasting in ${cities}`,
-    description: `Professional roughcasting for full houses, extensions and new-build sections across ${cities} and surrounding Ayrshire.`,
+    description: `Professional roughcasting for full houses, extensions and new-build sections across ${cities}.`,
     intro: `${brand} completes full house and extension roughcasting across ${region}, using durable render systems finished with your choice of chip for a long-lasting, weatherproof finish.`,
     localParagraph: `Homes across ${cities} and nearby towns face constant exposure to Scottish weather, and a sound roughcast finish keeps walls protected and looking sharp for years. ${brand} works locally and can advise on the best chip and colour for your property.`,
     image: assets.gallery[4],
@@ -71,7 +71,7 @@ export const categories: ServiceCategory[] = [
     ],
   },
   {
-    slug: "garden-wall-garage-roughcasting-irvine-kilwinning",
+    slug: "garden-wall-garage-roughcasting-ayrshire",
     name: "Garden Wall & Garage Roughcasting",
     title: `Garden Wall & Garage Roughcasting in ${cities}`,
     description: `Roughcasting for garden walls, garages and boundary walls across ${cities}, finished neatly with coping stones where needed.`,
@@ -104,7 +104,7 @@ export const categories: ServiceCategory[] = [
     ],
   },
   {
-    slug: "smooth-render-irvine-kilwinning",
+    slug: "smooth-render-ayrshire",
     name: "Smooth Render",
     title: `Smooth Render in ${cities}`,
     description: `Smooth render finishes and render repairs across ${cities}, giving properties a clean, modern painted finish.`,
@@ -137,7 +137,7 @@ export const categories: ServiceCategory[] = [
     ],
   },
   {
-    slug: "plastering-irvine-kilwinning",
+    slug: "plastering-ayrshire",
     name: "Plastering",
     title: `Plastering in ${cities}`,
     description: `Interior plastering and plaster repairs across ${cities}, finished smooth and ready for decoration.`,

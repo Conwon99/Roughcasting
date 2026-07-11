@@ -159,14 +159,14 @@ export const truncateMeta = (text: string, maxLength = 155): string => {
 
 export const brandName = () => business.alternateName;
 
-export const citiesLabel = () => `${business.primaryCity} & ${business.secondaryCity}`;
+export const citiesLabel = () => business.region;
 
 export const homepageTitle = () =>
   `${business.alternateName} | Roughcasting, Render & Plastering in ${citiesLabel()}`;
 
 export const homepageDescription = () =>
   truncateMeta(
-    `${business.alternateName} provides roughcasting, smooth render and plastering across ${citiesLabel()} and ${business.region}. Free quotes available.`,
+    `${business.alternateName} provides roughcasting, smooth render and plastering across ${citiesLabel()}. Free quotes available.`,
   );
 
 export const homepageH1 = () => `Roughcasting, Render & Plastering in ${citiesLabel()}`;

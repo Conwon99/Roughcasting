@@ -13,7 +13,7 @@ export const ExperienceContent = () => {
           Need a Free Roughcasting Quote?
         </h2>
         <p className="text-gray-200 text-sm sm:text-base box-border caret-transparent mt-2.5 mb-5 md:mt-5 md:mb-5 leading-relaxed">
-          {brand} helps homeowners across {cities} and {business.region} with roughcasting, smooth render and plastering, from garden walls and garages to full house renders. The team focuses on reliable communication and tidy, hard-working craftsmanship.
+          {brand} helps homeowners across {cities} with roughcasting, smooth render and plastering, from garden walls and garages to full house renders. The team focuses on reliable communication and tidy, hard-working craftsmanship.
         </p>
         <div className="box-border caret-transparent mb-5 md:mb-[50px]">
           <ul className="text-white text-sm sm:text-base md:text-lg box-border caret-transparent list-none pl-0 space-y-2 md:space-y-3">

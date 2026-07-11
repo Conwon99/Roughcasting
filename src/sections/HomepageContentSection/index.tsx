@@ -10,7 +10,7 @@ export const HomepageContentSection = () => {
       <div className="box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px]">
         <div className="box-border caret-transparent mb-12 md:mb-16">
           <h2 className="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-6 sm:text-3xl sm:leading-[38px] md:text-4xl md:leading-[43.2px]">Roughcasting & Render Services in {cities}</h2>
-          <p className="text-gray-200 text-base sm:text-lg md:text-xl box-border caret-transparent leading-7 mb-8">{brand} helps customers across {cities} and {business.region} with roughcasting, smooth render and plastering that keeps properties weatherproof and looking sharp. <a href="/contact" className="text-[#16a34a] hover:underline font-medium">Contact us to discuss your project</a>.</p>
+          <p className="text-gray-200 text-base sm:text-lg md:text-xl box-border caret-transparent leading-7 mb-8">{brand} helps customers across {cities} with roughcasting, smooth render and plastering that keeps properties weatherproof and looking sharp. <a href="/contact" className="text-[#16a34a] hover:underline font-medium">Contact us to discuss your project</a>.</p>
         </div>
         {categories.map((category) => (
           <div key={category.slug} className="box-border caret-transparent mb-12 md:mb-16">

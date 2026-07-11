@@ -98,7 +98,7 @@ export const business: BusinessConfig = {
   ],
 
   assets: {
-    hero: "/jkellyroughcasting-hero-v2.jpg",
+    hero: "/jkellyroughcasting-gal-02-v2.jpg",
     logo: "/jkellyroughcasting-logo.png",
     about: "/jkellyroughcasting-about-v2.jpg",
     gallery: [

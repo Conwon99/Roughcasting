@@ -112,8 +112,8 @@ export const business: BusinessConfig = {
     slideshow: [
       "/jkellyroughcasting-before-01.jpg",
       "/jkellyroughcasting-after-01.jpg",
-      "/jkellyroughcasting-gal-01-v2.jpg",
       "/jkellyroughcasting-gal-02-v2.jpg",
+      "/jkellyroughcasting-hero-v2.jpg",
       "/jkellyroughcasting-gal-03-v2.jpg",
       "/jkellyroughcasting-gal-04-v2.jpg",
       "/jkellyroughcasting-gal-05-v2.jpg",

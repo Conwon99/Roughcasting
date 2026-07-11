@@ -140,7 +140,7 @@ export const ContactForm = () => {
         </label>
         <textarea
           name="message"
-          placeholder="Tell us about your fencing, tree care, landscaping, garden tidy-up or roof cleaning enquiry..."
+          placeholder="Tell us about your roughcasting, render or plastering enquiry..."
           rows={6}
           required
           className="text-gray-900 text-base bg-white box-border caret-transparent block leading-[25.6px] align-middle w-full border-2 border-white mb-2.5 px-5 py-2.5 rounded-[20px] border-solid resize-vertical focus:outline-none focus:ring-2 focus:ring-white focus:border-white"
@@ -149,7 +149,7 @@ export const ContactForm = () => {
       <input
         type="submit"
         value="Submit"
-        className="text-white text-base font-bold bg-[#15803d] box-border caret-transparent leading-[24px] text-center text-nowrap w-full border-2 border-[#15803d] px-6 py-3 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-8 md:py-4 hover:bg-[#16a34a] hover:border-[#16a34a] transition-all duration-300 min-h-[56px] md:min-h-[64px] shadow-lg"
+        className="text-[#15803d] text-base font-bold bg-white box-border caret-transparent leading-[24px] text-center text-nowrap w-full border-2 border-white px-6 py-3 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-8 md:py-4 hover:bg-gray-100 transition-all duration-300 min-h-[56px] md:min-h-[64px] shadow-lg"
       />
     </form>
   );

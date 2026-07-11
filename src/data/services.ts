@@ -330,48 +330,6 @@ export const services: ServicePage[] = [
       },
     ],
   },
-  {
-    slug: "free-quotes",
-    title: "Free Quotes",
-    shortTitle: "Free Quotes",
-    navTitle: "Free Quotes",
-    parentCategorySlug: null,
-    description: `Request a free quote from ${brand} for roughcasting, render and plastering work across ${cities}.`,
-    cardDescription: `Message ${brand} to discuss your job and arrange a free, no-obligation quote.`,
-    iconUrl: "/icons/free-quotes.svg",
-    iconAlt: "Free quote icon",
-    image: assets.gallery[5],
-    imageAlt: `Roughcasting work completed by ${brand}`,
-    about: `If you are not sure where to start, send ${brand} a message with a few details and some photos of the job. The team can talk through your options and confirm coverage in your area.`,
-    why: "A quick conversation helps clarify the scope of work, the finish you want, and whether a site visit is needed before quoting.",
-    signsYouNeed: `If you know work is needed — a garden wall, garage, full house render, or a patch of damaged plaster — but are unsure of cost or timing, a free quote is the best first step. Photos and your location help ${brand} respond quickly with practical advice.`,
-    options: `${brand} quotes for all roughcasting, render and plastering work listed on this site. Get in touch through the contact form or Facebook page with details and photos. No-obligation quotes help you plan the job before committing.`,
-    localContext: `${brand} covers ${cities} and nearby towns. If you are nearby, get in touch to confirm coverage for your property.`,
-    whatToExpect: "Send a message with the work you need, your location and photos if you have them. The team will discuss the job, confirm the service area, and arrange a visit or quote as needed.",
-    whyChooseUs: `Free quotes, clear next steps and local service across ${cities}. Customers appreciate honest advice before any work begins.`,
-    benefits: [
-      "Free quotes for all listed services.",
-      "Clear next steps before work starts.",
-      `Local service across ${cities}.`,
-      "Honest advice on the most practical option.",
-    ],
-    process: [
-      "Send a message with the work you need.",
-      "Share photos and your location if possible.",
-      "Discuss the job and confirm the service area.",
-      "Agree the work, price and timing before starting.",
-    ],
-    faq: [
-      {
-        question: "What details should I send for a quote?",
-        answer: "A short description, your location and photos of the work area are all helpful.",
-      },
-      {
-        question: "Which areas do you quote for?",
-        answer: `${brand} covers ${cities} and surrounding towns.`,
-      },
-    ],
-  },
 ];
 
 export const getServiceBySlug = (slug: string) =>

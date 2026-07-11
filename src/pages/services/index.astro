@@ -4,7 +4,6 @@ import { Header } from "@/sections/Header";
 import { CTASection } from "@/sections/Footer/components/CTASection";
 import { Footer } from "@/sections/Footer";
 import { categories } from "@/data/categories";
-import { services } from "@/data/services";
 import { getServicesForCategory } from "@/data/categories";
 import { TrackedTelLink } from "@/components/TrackedTelLink";
 
@@ -88,13 +87,6 @@ const breadcrumbSchema = {
           <div>
             <h2 class="text-white text-2xl font-bold mb-2 md:text-4xl">General Enquiries</h2>
             <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
-              {services.filter((s) => s.slug === "free-quotes").map((service) => (
-                <a href={`/services/${service.slug}`} class="rounded-xl bg-neutral-900/75 border border-white/10 p-6 hover:border-[#16a34a] transition-colors block">
-                  <h3 class="text-white text-lg font-bold mb-2">{service.title}</h3>
-                  <p class="text-slate-300 text-sm mb-4">{service.cardDescription}</p>
-                  <span class="text-[#16a34a] text-sm font-semibold">Learn more →</span>
-                </a>
-              ))}
               <a href="/contact" class="rounded-xl bg-neutral-900/75 border border-white/10 p-6 hover:border-[#16a34a] transition-colors block">
                 <h3 class="text-white text-lg font-bold mb-2">Contact Us</h3>
                 <p class="text-slate-300 text-sm mb-4">Not sure what you need? Call or message and we will help figure it out.</p>

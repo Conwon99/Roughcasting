@@ -6,6 +6,7 @@ import { locations } from '@/data/locations';
 
 import { categories } from '@/data/categories';
 import { locationServicePages } from '@/data/locationServices';
+import { serviceLocationPages } from '@/data/serviceLocations';
 import { projects } from '@/data/projects';
 
 import { SITE_URL } from '@/data/site';
@@ -73,6 +74,16 @@ const pages: SitemapPage[] = [
     path: `/locations/${page.locationSlug}/${page.categorySlug}`,
 
     priority: '0.75',
+
+    changefreq: 'monthly' as const,
+
+  })),
+
+  ...serviceLocationPages.map((page) => ({
+
+    path: `/services/${page.serviceSlug}/${page.locationSlug}`,
+
+    priority: '0.7',
 
     changefreq: 'monthly' as const,
 

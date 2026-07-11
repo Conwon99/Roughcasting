@@ -6,6 +6,7 @@ import { RatingDisplay } from "@/sections/ExperienceSection/components/RatingDis
 import { Footer } from "@/sections/Footer";
 import { services, type ServicePage } from "@/data/services";
 import { getCategoryBySlug, getRelatedServices } from "@/data/categories";
+import { getServiceLocationPagesForService, getServiceLocationPath } from "@/data/serviceLocations";
 import { TrackedTelLink } from "@/components/TrackedTelLink";
 import { absoluteUrl, brandName, business, citiesLabel } from "@/data/business";
 
@@ -24,6 +25,7 @@ const canonical = absoluteUrl(`/services/${service.slug}`);
 const absoluteImage = absoluteUrl(service.image);
 const parentCategory = service.parentCategorySlug ? getCategoryBySlug(service.parentCategorySlug) : null;
 const relatedServices = getRelatedServices(service.slug);
+const townPages = getServiceLocationPagesForService(service.slug);
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -192,6 +194,18 @@ const breadcrumbSchema = {
                   <p class="box-border caret-transparent mb-2.5 text-gray-700">
                     {brand} provides trusted <a href={`/${parentCategory.slug}`} class="text-[#16a34a] hover:underline font-medium">{parentCategory.name.toLowerCase()} across {cities}</a> and surrounding areas. <a href="/" class="text-[#16a34a] hover:underline font-medium">Return to the homepage</a> to explore all services.
                   </p>
+                )}
+                {townPages.length > 0 && (
+                  <div class="box-border caret-transparent">
+                    <h2 class="text-gray-900 text-[22px] font-bold box-border caret-transparent leading-[30.8px] mb-2.5 md:text-[34px] md:leading-[40.8px] md:mb-[30px]">
+                      {service.shortTitle} by town
+                    </h2>
+                    <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
+                      {townPages.map((townPage) => (
+                        <a href={getServiceLocationPath(service.slug, townPage.locationSlug)} class="text-[#16a34a] hover:underline text-sm">{service.shortTitle} in {townPage.location.name}</a>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
             </div>

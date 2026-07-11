@@ -13,6 +13,8 @@ export type BusinessAssets = {
   logo: string;
   about: string;
   gallery: [string, string, string, string, string, string];
+  /** Images shown in the homepage before/after slideshow, in display order. */
+  slideshow: string[];
 };
 
 export type OpeningHoursSpec = {
@@ -100,6 +102,16 @@ export const business: BusinessConfig = {
     logo: "/jkellyroughcasting-logo.png",
     about: "/jkellyroughcasting-about.jpg",
     gallery: [
+      "/jkellyroughcasting-gal-01.jpg",
+      "/jkellyroughcasting-gal-02.jpg",
+      "/jkellyroughcasting-gal-03.jpg",
+      "/jkellyroughcasting-gal-04.jpg",
+      "/jkellyroughcasting-gal-05.jpg",
+      "/jkellyroughcasting-gal-06.jpg",
+    ],
+    slideshow: [
+      "/jkellyroughcasting-before-01.jpg",
+      "/jkellyroughcasting-after-01.jpg",
       "/jkellyroughcasting-gal-01.jpg",
       "/jkellyroughcasting-gal-02.jpg",
       "/jkellyroughcasting-gal-03.jpg",

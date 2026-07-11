@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { business } from "@/data/business";
 
 export const ExperienceImage = () => {
-  const images = business.assets.gallery;
+  const images = business.assets.slideshow;
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
 

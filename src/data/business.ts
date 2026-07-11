@@ -56,18 +56,14 @@ export type BusinessConfig = {
 };
 
 export const business: BusinessConfig = {
-  // NOTE: The Facebook page has no listed phone number — this business currently
-  // takes all enquiries via Facebook Messenger PM. The number below is a clearly
-  // fake placeholder (all zeros) and MUST be replaced with a real number before
-  // this site goes live. Search the codebase for "0000 000000" before launch.
   businessName: "J.Kelly Roughcasting & Rendering",
   alternateName: "J.Kelly Roughcasting",
   tagline: "Roughcasting, smooth render and plastering specialists across Ayrshire — from garden walls to full houses.",
   gbpCategory: "Roughcasting & Rendering Contractor",
 
-  phone: "+44 0000 000000",
-  phoneDisplay: "+44 0000 000000",
-  phoneLocal: "00000 000000",
+  phone: "+44 7570 658441",
+  phoneDisplay: "+44 7570 658441",
+  phoneLocal: "07570 658441",
   trackingPhone: null,
   trackingPhoneLocal: null,
 

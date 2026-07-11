@@ -27,7 +27,6 @@ export type ServicePage = {
   }>;
 };
 
-const serviceIconBase = "https://c.animaapp.com/mhqqhnhjBr0jWt/assets";
 const brand = brandName();
 const cities = citiesLabel();
 const { assets, primaryCity, secondaryCity, region } = business;
@@ -41,7 +40,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: "roughcasting-ayrshire",
     description: `Full house roughcasting in ${cities}. Complete render systems finished with your choice of chip. Free quotes from ${brand}.`,
     cardDescription: "Full house renders completed from base coat through to finished chip, taking properties back to brick where needed.",
-    iconUrl: `${serviceIconBase}/670f922acd8bf79374aa2c10_service-01.svg`,
+    iconUrl: "/icons/full-house-roughcasting.svg",
     iconAlt: "Roughcasting icon",
     image: assets.gallery[4],
     imageAlt: `Full house roughcasting completed by ${brand} in ${primaryCity}`,
@@ -87,7 +86,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: "roughcasting-ayrshire",
     description: `Extension roughcasting in ${cities}, matched to the existing house render. Free quotes from ${brand}.`,
     cardDescription: "New-build extensions and additions roughcast and matched to the existing property finish.",
-    iconUrl: `${serviceIconBase}/670f922a6c5c1d8102612221_service-02.svg`,
+    iconUrl: "/icons/extension-roughcasting.svg",
     iconAlt: "Extension roughcasting icon",
     image: assets.gallery[0],
     imageAlt: `Extension roughcasting by ${brand} in ${primaryCity}`,
@@ -129,7 +128,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: "garden-wall-garage-roughcasting-ayrshire",
     description: `Garden wall roughcasting in ${cities}, finished with coping stones. Free quotes from ${brand}.`,
     cardDescription: "Boundary and garden walls roughcast and finished neatly with coping stones.",
-    iconUrl: `${serviceIconBase}/670f922a0e27a271e441091e_service-03.svg`,
+    iconUrl: "/icons/garden-wall-roughcasting.svg",
     iconAlt: "Garden wall roughcasting icon",
     image: assets.gallery[2],
     imageAlt: `Garden wall roughcasting by ${brand} in ${primaryCity}`,
@@ -171,7 +170,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: "garden-wall-garage-roughcasting-ayrshire",
     description: `Garage roughcasting in ${cities}, base coated and finished to match your house. Free quotes from ${brand}.`,
     cardDescription: "Garages base coated, beaded and roughcast to match the main house finish.",
-    iconUrl: `${serviceIconBase}/670f922acd8bf79374aa2c10_service-01.svg`,
+    iconUrl: "/icons/garage-roughcasting.svg",
     iconAlt: "Garage roughcasting icon",
     image: assets.gallery[0],
     imageAlt: `Garage roughcasting by ${brand} in ${primaryCity}`,
@@ -213,7 +212,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: "smooth-render-ayrshire",
     description: `Smooth render finishes in ${cities}, giving a clean, paintable exterior. Free quotes from ${brand}.`,
     cardDescription: "Smooth painted render finishes for a contemporary exterior look.",
-    iconUrl: `${serviceIconBase}/670f922a6c5c1d8102612221_service-02.svg`,
+    iconUrl: "/icons/smooth-render.svg",
     iconAlt: "Smooth render icon",
     image: assets.gallery[1],
     imageAlt: `Smooth render finish by ${brand} in ${primaryCity}`,
@@ -255,7 +254,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: "smooth-render-ayrshire",
     description: `Render repairs and patch-ups in ${cities}. Cracked, blown or damaged render fixed. Free quotes from ${brand}.`,
     cardDescription: "Cracked, blown or damaged render sections repaired and blended into the existing finish.",
-    iconUrl: `${serviceIconBase}/670f922a0e27a271e441091e_service-03.svg`,
+    iconUrl: "/icons/render-repairs-patch-ups.svg",
     iconAlt: "Render repair icon",
     image: assets.gallery[3],
     imageAlt: `Render repair work by ${brand} in ${primaryCity}`,
@@ -297,7 +296,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: "plastering-ayrshire",
     description: `Interior plastering in ${cities}. Full skims and patch repairs, finished smooth. Free quotes from ${brand}.`,
     cardDescription: "Walls and ceilings plastered smooth and ready for decoration.",
-    iconUrl: `${serviceIconBase}/670f922acd8bf79374aa2c10_service-01.svg`,
+    iconUrl: "/icons/interior-plastering.svg",
     iconAlt: "Plastering icon",
     image: assets.gallery[3],
     imageAlt: `Interior plastering completed by ${brand}`,
@@ -339,7 +338,7 @@ export const services: ServicePage[] = [
     parentCategorySlug: null,
     description: `Request a free quote from ${brand} for roughcasting, render and plastering work across ${cities}.`,
     cardDescription: `Message ${brand} to discuss your job and arrange a free, no-obligation quote.`,
-    iconUrl: `${serviceIconBase}/670f922a6c5c1d8102612221_service-02.svg`,
+    iconUrl: "/icons/free-quotes.svg",
     iconAlt: "Free quote icon",
     image: assets.gallery[5],
     imageAlt: `Roughcasting work completed by ${brand}`,

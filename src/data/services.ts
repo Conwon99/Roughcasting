@@ -1,10 +1,5 @@
 import { business, brandName, citiesLabel } from "@/data/business";
 
-export type ServiceLocationFaq = {
-  question: string;
-  answer: string;
-};
-
 export type ServicePage = {
   slug: string;
   title: string;
@@ -30,14 +25,6 @@ export type ServicePage = {
     question: string;
     answer: string;
   }>;
-  /** Location matrix SEO fields — used by serviceLocations.ts */
-  contractorPhrase: string;
-  nearMePhrase: string;
-  locationMetaTemplate: (town: string) => string;
-  locationIntroTemplate: (town: string) => string;
-  locationLocalTemplate: (town: string, nearby: string[]) => string;
-  locationBodyTemplate: (town: string) => string;
-  locationFaqTemplates: (town: string) => ServiceLocationFaq[];
 };
 
 const brand = brandName();
@@ -51,7 +38,7 @@ export const services: ServicePage[] = [
     shortTitle: "Full House Roughcasting",
     navTitle: "Full House Roughcasting",
     parentCategorySlug: "roughcasting-ayrshire",
-    description: `Full house roughcasting in ${cities}. Complete render systems finished with your choice of chip. Free quotes from ${brand}.`,
+    description: `Full house roughcasting in ${cities}. Complete render systems stripped back to brick and finished in your choice of chip. Free quotes from ${brand}.`,
     cardDescription: "Full house renders completed from base coat through to finished chip, taking properties back to brick where needed.",
     iconUrl: "/icons/full-house-roughcasting.svg",
     iconAlt: "Roughcasting icon",
@@ -90,30 +77,6 @@ export const services: ServicePage[] = [
         answer: `Yes. ${brand} roughcasts full houses across ${cities}. Contact us with your location for a free quote.`,
       },
     ],
-    contractorPhrase: "roughcaster",
-    nearMePhrase: "full house roughcasting near me",
-    locationMetaTemplate: (town) =>
-      `Full house roughcasting in ${town} by ${brand}. Complete render systems finished with your choice of chip. Free quotes.`,
-    locationIntroTemplate: (town) =>
-      `${brand} completes full house roughcasting in ${town}, taking properties back to brick where the existing render has failed and applying a complete new system from base coat to finished chip.`,
-    locationLocalTemplate: (town, nearby) =>
-      `Houses in ${town} face the same exposed Ayrshire weather as the rest of the region, and a sound roughcast finish keeps walls protected for years. If you are searching for a roughcaster near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    locationBodyTemplate: (town) =>
-      `From full house renders to complete strip-backs, ${brand} helps customers in ${town} achieve a durable roughcast finish in a range of chips and colours. Old, failing render can be stripped back to brick before the new system goes on. Contact ${brand} for a free quote in ${town}.`,
-    locationFaqTemplates: (town) => [
-      {
-        question: `Do you offer full house roughcasting in ${town}?`,
-        answer: `Yes. ${brand} completes full house roughcasting in ${town} and nearby areas, with free quotes available.`,
-      },
-      {
-        question: `Can you strip old render back to brick in ${town}?`,
-        answer: `Yes. Failing or blown render can be stripped back to brickwork before the new roughcast system is applied in ${town}.`,
-      },
-      {
-        question: `Is there a roughcaster near me in ${town}?`,
-        answer: `Yes. ${brand} is a local roughcaster serving ${town} and surrounding Ayrshire. Contact us with your location for a free quote.`,
-      },
-    ],
   },
   {
     slug: "extension-roughcasting",
@@ -121,7 +84,7 @@ export const services: ServicePage[] = [
     shortTitle: "Extension Roughcasting",
     navTitle: "Extensions",
     parentCategorySlug: "roughcasting-ayrshire",
-    description: `Extension roughcasting in ${cities}, matched to the existing house render. Free quotes from ${brand}.`,
+    description: `Extension roughcasting in ${cities}, with new-build sections and additions matched to the existing house render and chip. Free quotes from ${brand}.`,
     cardDescription: "New-build extensions and additions roughcast and matched to the existing property finish.",
     iconUrl: "/icons/extension-roughcasting.svg",
     iconAlt: "Extension roughcasting icon",
@@ -156,26 +119,6 @@ export const services: ServicePage[] = [
         answer: `Yes. ${brand} covers extension roughcasting across ${cities}.`,
       },
     ],
-    contractorPhrase: "roughcaster",
-    nearMePhrase: "extension roughcasting near me",
-    locationMetaTemplate: (town) =>
-      `Extension roughcasting in ${town} by ${brand}, matched to your existing house render. Free quotes.`,
-    locationIntroTemplate: (town) =>
-      `${brand} roughcasts extensions in ${town}, matching the chip and colour to the existing house so the join is barely noticeable.`,
-    locationLocalTemplate: (town, nearby) =>
-      `New builds and extensions in ${town} need a finish matched carefully to the rest of the property. If you are searching for extension roughcasting near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    locationBodyTemplate: (town) =>
-      `${brand} base coats, beads and finishes extensions in ${town} in a chip matched to the main house wherever possible. Contact ${brand} for a free quote in ${town}.`,
-    locationFaqTemplates: (town) => [
-      {
-        question: `Do you roughcast extensions in ${town}?`,
-        answer: `Yes. ${brand} roughcasts extensions in ${town}, matched to the existing house finish.`,
-      },
-      {
-        question: `Do you offer extension roughcasting near me in ${town}?`,
-        answer: `Yes. ${brand} covers extension roughcasting in ${town} and surrounding Ayrshire.`,
-      },
-    ],
   },
   {
     slug: "garden-wall-roughcasting",
@@ -183,7 +126,7 @@ export const services: ServicePage[] = [
     shortTitle: "Garden Wall Roughcasting",
     navTitle: "Garden Walls",
     parentCategorySlug: "garden-wall-garage-roughcasting-ayrshire",
-    description: `Garden wall roughcasting in ${cities}, finished with coping stones. Free quotes from ${brand}.`,
+    description: `Garden wall and boundary wall roughcasting in ${cities}, finished neatly with coping stones to shed water. Call for free quotes from ${brand}.`,
     cardDescription: "Boundary and garden walls roughcast and finished neatly with coping stones.",
     iconUrl: "/icons/garden-wall-roughcasting.svg",
     iconAlt: "Garden wall roughcasting icon",
@@ -218,26 +161,6 @@ export const services: ServicePage[] = [
         answer: `Yes. ${brand} roughcasts garden walls across ${cities}. Contact us for a free quote.`,
       },
     ],
-    contractorPhrase: "roughcaster",
-    nearMePhrase: "garden wall roughcasting near me",
-    locationMetaTemplate: (town) =>
-      `Garden wall roughcasting in ${town} by ${brand}, finished with coping stones. Free quotes.`,
-    locationIntroTemplate: (town) =>
-      `${brand} roughcasts garden and boundary walls in ${town}, usually finished with coping stones for a neat, durable edge.`,
-    locationLocalTemplate: (town, nearby) =>
-      `Garden walls in ${town} take a battering from the weather and everyday wear. If you are searching for garden wall roughcasting near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    locationBodyTemplate: (town) =>
-      `${brand} completes garden wall roughcasting jobs in ${town} of all sizes, from small boundary walls to larger retaining walls. Contact ${brand} for a free quote in ${town}.`,
-    locationFaqTemplates: (town) => [
-      {
-        question: `Do you roughcast garden walls in ${town}?`,
-        answer: `Yes. ${brand} roughcasts garden and boundary walls of all sizes in ${town}, with free quotes available.`,
-      },
-      {
-        question: `Do you fit coping stones in ${town}?`,
-        answer: `Yes. ${brand} can finish garden walls in ${town} with coping stones for a neat, durable edge.`,
-      },
-    ],
   },
   {
     slug: "garage-roughcasting",
@@ -245,7 +168,7 @@ export const services: ServicePage[] = [
     shortTitle: "Garage Roughcasting",
     navTitle: "Garages",
     parentCategorySlug: "garden-wall-garage-roughcasting-ayrshire",
-    description: `Garage roughcasting in ${cities}, base coated and finished to match your house. Free quotes from ${brand}.`,
+    description: `Garage roughcasting in ${cities}, base coated and finished in a chip to match the rest of your house. Call today for free quotes from ${brand}.`,
     cardDescription: "Garages base coated, beaded and roughcast to match the main house finish.",
     iconUrl: "/icons/garage-roughcasting.svg",
     iconAlt: "Garage roughcasting icon",
@@ -280,26 +203,6 @@ export const services: ServicePage[] = [
         answer: `Yes. ${brand} covers garage roughcasting across ${cities}.`,
       },
     ],
-    contractorPhrase: "roughcaster",
-    nearMePhrase: "garage roughcasting near me",
-    locationMetaTemplate: (town) =>
-      `Garage roughcasting in ${town} by ${brand}, base coated and finished to match your house. Free quotes.`,
-    locationIntroTemplate: (town) =>
-      `${brand} roughcasts garages in ${town}, base coated and finished to match the main house wherever possible.`,
-    locationLocalTemplate: (town, nearby) =>
-      `Detached garages are common in ${town}, and getting the finish to match the house makes a real difference. If you are searching for garage roughcasting near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    locationBodyTemplate: (town) =>
-      `${brand} base coats, beads and finishes garages in ${town}, matched to the house chip and colour where required. Contact ${brand} for a free quote in ${town}.`,
-    locationFaqTemplates: (town) => [
-      {
-        question: `Do you roughcast garages in ${town}?`,
-        answer: `Yes. ${brand} completes garage roughcasting in ${town}, matched to the rest of the property where needed.`,
-      },
-      {
-        question: `Do you offer garage roughcasting near me in ${town}?`,
-        answer: `Yes. ${brand} covers garage roughcasting in ${town} and surrounding Ayrshire.`,
-      },
-    ],
   },
   {
     slug: "smooth-render",
@@ -307,7 +210,7 @@ export const services: ServicePage[] = [
     shortTitle: "Smooth Render",
     navTitle: "Smooth Render",
     parentCategorySlug: "smooth-render-ayrshire",
-    description: `Smooth render finishes in ${cities}, giving a clean, paintable exterior. Free quotes from ${brand}.`,
+    description: `Smooth render finishes in ${cities}, giving homes a clean, modern and paintable exterior that lasts. Call today for free quotes from ${brand}.`,
     cardDescription: "Smooth painted render finishes for a contemporary exterior look.",
     iconUrl: "/icons/smooth-render.svg",
     iconAlt: "Smooth render icon",
@@ -342,26 +245,6 @@ export const services: ServicePage[] = [
         answer: `Yes. ${brand} applies smooth render across ${cities}.`,
       },
     ],
-    contractorPhrase: "render specialist",
-    nearMePhrase: "smooth render near me",
-    locationMetaTemplate: (town) =>
-      `Smooth render in ${town} by ${brand}. A clean, paintable exterior finish. Free quotes.`,
-    locationIntroTemplate: (town) =>
-      `${brand} applies smooth render finishes in ${town} for customers who want a contemporary, paintable exterior.`,
-    locationLocalTemplate: (town, nearby) =>
-      `Extensions and refurbishments in ${town} often call for a smooth, paintable render finish. If you are searching for a render specialist near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    locationBodyTemplate: (town) =>
-      `${brand} base coats, beads and applies smooth render in ${town}, left level and ready for painting. Contact ${brand} for a free quote in ${town}.`,
-    locationFaqTemplates: (town) => [
-      {
-        question: `Do you apply smooth render in ${town}?`,
-        answer: `Yes. ${brand} applies smooth render finishes in ${town} and nearby areas, with free quotes available.`,
-      },
-      {
-        question: `Do you offer smooth render near me in ${town}?`,
-        answer: `Yes. ${brand} covers smooth render in ${town} and surrounding Ayrshire.`,
-      },
-    ],
   },
   {
     slug: "render-repairs-patch-ups",
@@ -369,7 +252,7 @@ export const services: ServicePage[] = [
     shortTitle: "Render Repairs",
     navTitle: "Repairs",
     parentCategorySlug: "smooth-render-ayrshire",
-    description: `Render repairs and patch-ups in ${cities}. Cracked, blown or damaged render fixed. Free quotes from ${brand}.`,
+    description: `Render repairs and patch-ups in ${cities}. Cracked, blown or damaged render cut out, repaired and blended in. Free quotes from ${brand}.`,
     cardDescription: "Cracked, blown or damaged render sections repaired and blended into the existing finish.",
     iconUrl: "/icons/render-repairs-patch-ups.svg",
     iconAlt: "Render repair icon",
@@ -404,34 +287,14 @@ export const services: ServicePage[] = [
         answer: `Yes. ${brand} repairs render across ${cities}.`,
       },
     ],
-    contractorPhrase: "render specialist",
-    nearMePhrase: "render repairs near me",
-    locationMetaTemplate: (town) =>
-      `Render repairs and patch-ups in ${town} by ${brand}. Cracked or damaged render fixed. Free quotes.`,
-    locationIntroTemplate: (town) =>
-      `${brand} repairs and patches cracked or damaged render in ${town}, blending the repair into the existing finish.`,
-    locationLocalTemplate: (town, nearby) =>
-      `Weather exposure in ${town} means render damage is common, particularly on older properties. If you are searching for render repairs near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    locationBodyTemplate: (town) =>
-      `${brand} inspects and repairs damaged render sections in ${town}, matching the patch to the existing chip and colour. Contact ${brand} for a free quote in ${town}.`,
-    locationFaqTemplates: (town) => [
-      {
-        question: `Do you carry out render repairs in ${town}?`,
-        answer: `Yes. ${brand} repairs cracked or damaged render in ${town} and nearby areas.`,
-      },
-      {
-        question: `Can you match a repair to my existing render in ${town}?`,
-        answer: `Yes. ${brand} matches repairs to the existing chip and colour as closely as possible in ${town}.`,
-      },
-    ],
   },
   {
     slug: "interior-plastering",
     title: "Interior Plastering",
-    shortTitle: "Plastering",
+    shortTitle: "Interior Plastering",
     navTitle: "Plastering",
     parentCategorySlug: "plastering-ayrshire",
-    description: `Interior plastering in ${cities}. Full skims and patch repairs, finished smooth. Free quotes from ${brand}.`,
+    description: `Interior plastering in ${cities}. Full skims, ceilings and patch repairs, finished smooth and ready to decorate. Free quotes from ${brand}.`,
     cardDescription: "Walls and ceilings plastered smooth and ready for decoration.",
     iconUrl: "/icons/interior-plastering.svg",
     iconAlt: "Plastering icon",
@@ -464,26 +327,6 @@ export const services: ServicePage[] = [
       {
         question: `Do you offer plastering near me in ${primaryCity} or ${secondaryCity}?`,
         answer: `Yes. ${brand} plasters properties across ${cities}.`,
-      },
-    ],
-    contractorPhrase: "plasterer",
-    nearMePhrase: "plasterer near me",
-    locationMetaTemplate: (town) =>
-      `Interior plastering in ${town} by ${brand}. Full skims and patch repairs. Free quotes.`,
-    locationIntroTemplate: (town) =>
-      `${brand} provides interior plastering in ${town}, from full skims to smaller patch repairs.`,
-    locationLocalTemplate: (town, nearby) =>
-      `Older homes in ${town} often need plaster repaired before decorating. If you are searching for a plasterer near ${town}, ${brand} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    locationBodyTemplate: (town) =>
-      `${brand} plasters walls and ceilings in ${town}, leaving a smooth surface ready for painting or wallpapering. Contact ${brand} for a free quote in ${town}.`,
-    locationFaqTemplates: (town) => [
-      {
-        question: `Do you offer plastering in ${town}?`,
-        answer: `Yes. ${brand} provides interior plastering in ${town} and nearby areas, with free quotes available.`,
-      },
-      {
-        question: `Is there a plasterer near me in ${town}?`,
-        answer: `Yes. ${brand} is a local plasterer serving ${town} and surrounding Ayrshire.`,
       },
     ],
   },

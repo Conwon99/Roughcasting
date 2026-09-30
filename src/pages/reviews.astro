@@ -60,7 +60,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title={`Customer Reviews | ${brand} ${cities}`}
-  description={`Read customer reviews for ${brand} ${serviceList} work across ${cities}.`}
+  description={`Read customer reviews for ${brand}. Roughcasting, render and plastering work across ${cities}, rated 5 stars by local homeowners. Free quotes.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
@@ -113,8 +113,8 @@ const breadcrumbSchema = {
             ))}
           </div>
 
-          <div class="rounded-xl bg-neutral-900/75 border border-white/10 p-8 text-center text-slate-300 min-h-[160px] flex items-center justify-center mt-10">
-            <p>Google Reviews widget placeholder — paste your embed code here when available.</p>
+          <div class="rounded-xl bg-neutral-900/75 border border-white/10 p-8 text-center text-slate-300 mt-10">
+            <p>Had work done by {brand}? <a href={business.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-[#16a34a] hover:underline">Find us on Google</a> or <a href={business.facebookUrl} target="_blank" rel="noopener noreferrer" class="text-[#16a34a] hover:underline">leave a review on Facebook</a>.</p>
           </div>
         </div>
       </section>

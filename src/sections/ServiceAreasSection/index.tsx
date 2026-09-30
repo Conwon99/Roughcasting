@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ServiceAreaMap } from "@/sections/ServiceAreasSection/ServiceAreaMap";
 import { brandName, business, citiesLabel } from "@/data/business";
 import { categories } from "@/data/categories";
-import { locations } from "@/data/locations";
+import { serviceAreaTowns } from "@/data/locations";
 
 export const ServiceAreasSection = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -20,11 +20,7 @@ export const ServiceAreasSection = () => {
             Areas We Cover
           </h2>
           <p className="text-[15px] text-neutral-700 leading-6 md:text-base max-w-[700px]">
-            {brand} provides {serviceList} across {citiesLabel()}. Select your area below or{" "}
-            <a href="/locations" className="text-[#16a34a] hover:underline font-medium">
-              view all service areas
-            </a>
-            . Get in touch to confirm coverage and book a free quote.
+            {brand} provides {serviceList} across {citiesLabel()}. Get in touch to confirm coverage and book a free quote.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -47,14 +43,12 @@ export const ServiceAreasSection = () => {
 
               {isOpen && (
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] leading-6 text-neutral-700 md:text-base mt-4 list-none pl-0">
-                  {locations.map((location) => (
-                    <li key={location.slug} className="flex items-center gap-2">
+                  {serviceAreaTowns.map((town) => (
+                    <li key={town} className="flex items-center gap-2">
                       <span className="text-neutral-800" aria-hidden>
                         •
                       </span>
-                      <a href={`/locations/${location.slug}`} className="text-neutral-700 hover:text-[#16a34a] hover:underline">
-                        {location.name}
-                      </a>
+                      <span>{town}</span>
                     </li>
                   ))}
                   <li className="flex items-center gap-2">

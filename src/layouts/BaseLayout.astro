@@ -9,7 +9,7 @@ import {
   homepageDescription,
   schemaImages,
 } from '@/data/business';
-import { locations } from '@/data/locations';
+import { serviceAreaTowns } from '@/data/locations';
 import { reviews, TOTAL_REVIEW_COUNT } from '@/data/reviews';
 import { CANONICAL_PHONE_TEL } from '@/utils/phoneTracking';
 
@@ -45,9 +45,9 @@ const businessSchema = {
   },
   "areaServed": [
     { "@type": "AdministrativeArea", "name": business.region },
-    ...locations.map((location) => ({
+    ...serviceAreaTowns.map((town) => ({
       "@type": "Place",
-      "name": location.name,
+      "name": town,
     })),
   ],
   "serviceType": business.serviceTypes,

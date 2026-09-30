@@ -10,3 +10,8 @@
 /admin/*      /index.html   404
 /api/*        /index.html   404
 
+
+# Location pages removed — send old URLs to the closest live page
+/locations                      /                          301
+/locations/*                    /                          301
+/services/:service/:town        /services/:service         301

@@ -1,20 +1,28 @@
 User-agent: *
 Allow: /
-
-# Sitemap — update domain when building a new site
-Sitemap: https://www.jkellyroughcasting.co.uk/sitemap.xml
-
-# Disallow private/non-public endpoints only. Keep Astro assets crawlable so search engines can render pages.
 Disallow: /api/
 
-# Explicit crawler allowances
+# Search engine crawlers
 User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
 User-agent: Slurp
+Allow: /
+
+# AI / LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 # Social media crawlers
@@ -26,3 +34,5 @@ Allow: /
 
 User-agent: LinkedInBot
 Allow: /
+
+Sitemap: https://www.jkellyroughcasting.co.uk/sitemap.xml

@@ -162,7 +162,7 @@ export const homepageTitle = () =>
 
 export const homepageDescription = () =>
   truncateMeta(
-    `${business.alternateName} provides roughcasting, smooth render and plastering across ${citiesLabel()}. Free quotes available.`,
+    `${business.alternateName} provides roughcasting, smooth render and plastering across ${citiesLabel()}, from garden walls to full houses. Call today for a free quote.`,
   );
 
 export const homepageH1 = () => `Roughcasting, Render & Plastering in ${citiesLabel()}`;

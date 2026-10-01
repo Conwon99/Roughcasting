@@ -49,7 +49,7 @@ const breadcrumbSchema = {
             Proudly Serving <span class="text-[#16a34a]">{cities}</span> and Surrounding Areas
           </h1>
           <p class="text-slate-200 box-border caret-transparent max-w-[780px] mx-auto">
-            {brand} provides {serviceList} across {business.region}. Select your area below or call <TrackedTelLink client:load showPhoneNumber className="text-[#16a34a] hover:underline font-semibold" trackingLocation="locations" /> to confirm coverage.
+            {brand} provides {serviceList} across {business.region}. See the areas we cover below or call <TrackedTelLink client:load showPhoneNumber className="text-[#16a34a] hover:underline font-semibold" trackingLocation="locations" /> to confirm coverage.
           </p>
         </div>
       </section>
@@ -58,10 +58,10 @@ const breadcrumbSchema = {
         <div class="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8">
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {locations.map((location) => (
-              <a href={`/locations/${location.slug}`} class="rounded-xl bg-neutral-900/75 border border-white/10 p-5 hover:border-[#16a34a] transition-colors block">
+              <div class="rounded-xl bg-neutral-900/75 border border-white/10 p-5">
                 <h2 class="text-white text-lg font-bold mb-2">{location.name}</h2>
                 <p class="text-slate-300 text-sm">{location.description}</p>
-              </a>
+              </div>
             ))}
           </div>
         </div>

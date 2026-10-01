@@ -4,13 +4,6 @@ import { categories } from "@/data/categories";
 import { locations } from "@/data/locations";
 import { services } from "@/data/services";
 
-const topMatrixLinks = locations.slice(0, 2).flatMap((location) =>
-  categories.slice(0, 2).map((category) => ({
-    label: `${category.name} in ${location.shortName ?? location.name}`,
-    href: `/locations/${location.slug}/${category.slug}`,
-  })),
-);
-
 export const Footer = () => {
   const brand = brandName();
 
@@ -77,11 +70,6 @@ export const Footer = () => {
                     {category.name}
                   </a>
                 ))}
-                {topMatrixLinks.map((link) => (
-                  <a key={link.href} href={link.href} className="text-white/60 text-xs box-border caret-transparent hover:text-[#16a34a] pl-3 transition-colors duration-300">
-                    {link.label}
-                  </a>
-                ))}
                 {services.map((service) => (
                   <a key={service.slug} href={`/services/${service.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
                     {service.shortTitle}
@@ -98,7 +86,7 @@ export const Footer = () => {
                   All Locations
                 </a>
                 {locations.map((location) => (
-                  <a key={location.slug} href={`/locations/${location.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+                  <a key={location.slug} href="/locations" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
                     {location.name}
                   </a>
                 ))}

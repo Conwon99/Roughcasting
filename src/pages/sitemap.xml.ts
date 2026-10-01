@@ -2,11 +2,7 @@ import type { APIRoute } from 'astro';
 
 import { services } from '@/data/services';
 
-import { locations } from '@/data/locations';
-
 import { categories } from '@/data/categories';
-import { locationServicePages } from '@/data/locationServices';
-import { serviceLocationPages } from '@/data/serviceLocations';
 import { projects } from '@/data/projects';
 
 import { SITE_URL } from '@/data/site';
@@ -54,36 +50,6 @@ const pages: SitemapPage[] = [
     path: `/services/${service.slug}`,
 
     priority: '0.85',
-
-    changefreq: 'monthly' as const,
-
-  })),
-
-  ...locations.map((location) => ({
-
-    path: `/locations/${location.slug}`,
-
-    priority: '0.8',
-
-    changefreq: 'monthly' as const,
-
-  })),
-
-  ...locationServicePages.map((page) => ({
-
-    path: `/locations/${page.locationSlug}/${page.categorySlug}`,
-
-    priority: '0.75',
-
-    changefreq: 'monthly' as const,
-
-  })),
-
-  ...serviceLocationPages.map((page) => ({
-
-    path: `/services/${page.serviceSlug}/${page.locationSlug}`,
-
-    priority: '0.7',
 
     changefreq: 'monthly' as const,
 

@@ -52,7 +52,7 @@ export const ServiceAreasSection = () => {
                       <span className="text-neutral-800" aria-hidden>
                         •
                       </span>
-                      <a href={`/locations/${location.slug}`} className="text-neutral-700 hover:text-[#16a34a] hover:underline">
+                      <a href="/locations" className="text-neutral-700 hover:text-[#16a34a] hover:underline">
                         {location.name}
                       </a>
                     </li>

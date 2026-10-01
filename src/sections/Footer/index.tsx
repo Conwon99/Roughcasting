@@ -1,7 +1,6 @@
 import { PhoneLink } from "@/components/PhoneLink";
 import { brandName, business, citiesLabel } from "@/data/business";
 import { categories } from "@/data/categories";
-import { locations } from "@/data/locations";
 import { services } from "@/data/services";
 
 export const Footer = () => {
@@ -83,13 +82,8 @@ export const Footer = () => {
               </summary>
               <div className="box-border caret-transparent flex flex-col gap-y-2 mt-3 pl-3 max-h-48 overflow-y-auto">
                 <a href="/locations" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300 font-medium">
-                  All Locations
+                  Areas We Cover
                 </a>
-                {locations.map((location) => (
-                  <a key={location.slug} href="/locations" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
-                    {location.name}
-                  </a>
-                ))}
               </div>
             </details>
           </div>

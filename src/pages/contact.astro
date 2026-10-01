@@ -51,7 +51,7 @@ const faqSchema = buildFaqSchema(homepageFaqs);
             <p class="text-slate-200 mb-6">{brand} covers {citiesLabel()} and surrounding towns. Not sure if we serve your area? Call <TrackedTelLink client:load showPhoneNumber className="text-[#16a34a] hover:underline font-semibold" trackingLocation="contact" /> and we will let you know.</p>
             <div class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 mb-4">
               {locations.map((location) => (
-                <a href="/locations" class="text-slate-200 text-sm hover:text-[#16a34a] hover:underline">{location.name}</a>
+                <span class="text-slate-200 text-sm">{location.name}</span>
               ))}
             </div>
             <a href="/locations" class="text-[#16a34a] hover:underline font-medium text-sm">View all service areas →</a>

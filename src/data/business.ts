@@ -61,9 +61,9 @@ export const business: BusinessConfig = {
   tagline: "Roughcasting, smooth render and plastering specialists across Ayrshire — from garden walls to full houses.",
   gbpCategory: "Roughcasting & Rendering Contractor",
 
-  phone: "+44 7570 658441",
-  phoneDisplay: "+44 7570 658441",
-  phoneLocal: "07570 658441",
+  phone: "+44 7864 064993",
+  phoneDisplay: "+44 7864 064993",
+  phoneLocal: "07864 064993",
   trackingPhone: null,
   trackingPhoneLocal: null,
 
